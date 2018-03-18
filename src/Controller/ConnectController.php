@@ -17,4 +17,10 @@ class ConnectController extends Controller
             ->getClient('google')
             ->redirect();
     }
+
+    /** @Route("/check") */
+    public function checkAction()
+    {
+        throw $this->createAccessDeniedException("You shouldn't be here.");
+    }
 }
